@@ -8,9 +8,10 @@ from ray.util.joblib import register_ray
 register_ray()
 
 param_space = {
-    'C': np.logspace(-6, 6, 5),
+    'C': np.logspace(-6, 6, 10),
     'gamma': np.logspace(-8, 8, 5),
     'tol': np.logspace(-4, -1, 10),
+    'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
     'class_weight': [None, 'balanced'],
 }
 
